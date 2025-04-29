@@ -23,7 +23,7 @@ app.use(express.json()); // to parse json body
 app.use(cookieParser());
 app.use(
     cors({
-        origin: 'https://study-buddy-three-lilac.vercel.app/', // frontend link
+        origin: 'https://study-buddy-three-lilac.vercel.app', // frontend link
         credentials: true
     })
 );
