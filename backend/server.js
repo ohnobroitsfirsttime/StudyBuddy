@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express();
+require('dotenv').config();
 
 // packages
 const fileUpload = require('express-fileupload');
@@ -23,7 +24,7 @@ app.use(express.json()); // to parse json body
 app.use(cookieParser());
 app.use(
     cors({
-        origin: 'https://study-buddy-three-lilac.vercel.app', // frontend link
+        origin: process.env.ORIGIN, // frontend link
         credentials: true
     })
 );
