@@ -23,8 +23,7 @@ app.use(express.json()); // to parse json body
 app.use(cookieParser());
 app.use(
     cors({
-        origin: 'http://localhost:5173', // frontend link
-        // origin: "http://localhost:3000",
+        origin: 'https://study-buddy-three-lilac.vercel.app/', // frontend link
         credentials: true
     })
 );
@@ -36,7 +35,7 @@ app.use(
 )
 
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
     console.log(`Server Started on PORT ${PORT}`);
